@@ -10,3 +10,16 @@ use ```lsblk``` to find the sdcard
 
 ## Erasing the sdcard to boot to emmc again
 ```dd if=/dev/zero of=/dev/sdb bs=512 count=1```
+
+## Calls / SMS on postmarketOS (as of 2/19/2020 - pine-pinephone-20200218-phosh.img)
+from https://forum.pine64.org/showthread.php?tid=9201&pid=60702#pid60702
+
+```
+sudo apk add modemmanager
+sudo ofonoctl poweron
+sudo ofonoctl online
+sudo ofonoctl wan --connect --append-dns
+sudo /etc/init.d/modemmanager start
+sudo rc-update add modemmanager
+```
+and then reboot
