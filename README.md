@@ -8,9 +8,8 @@ First, I put postmarketOS on an sdcard and booted the pinephone. Next, I used sc
 /dev/sdb is an example here, use the appropriate tools (e.g. ```lsblk```) to find the correct value to use here
 ```sudo dd if=image.img of=/dev/sdb```
 
-## Erasing the sdcard to boot to emmc again
-mmcblk0 is an example here, use the appropriate tools (e.g. ```lsblk```) to find the correct value to use here
-```dd if=/dev/zero of=/dev/mmcblk0 bs=512 count=1```
+## Erasing the sdcard to boot to emmc again (from https://github.com/Oleffa/pinephone-guides)
+```dd if=/dev/zero of=/dev/sdb bs=512 count=1```
 
 ## Calls / SMS on postmarketOS (as of 2/19/2020 - pine-pinephone-20200218-phosh.img)
 from https://forum.pine64.org/showthread.php?tid=9201&pid=60702#pid60702
